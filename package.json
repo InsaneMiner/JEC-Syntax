@@ -1,0 +1,25 @@
+{
+    "name": "jec",
+    "displayName": "JEC",
+    "description": "JEC programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jec",
+            "aliases": ["JEC", "jec"],
+            "extensions": [".jec"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jec",
+            "scopeName": "source.jec",
+            "path": "./syntaxes/jec.tmLanguage.json"
+        }]
+    }
+}

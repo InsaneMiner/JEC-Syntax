@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "JEC",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		},
+		{ 
+			"include": "#letter" 
+		},
+		{
+			"include": "#paren-expression"
+		},
+		{
+			"include": "#number"
+		}
+
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.jec",
+				"match": "\\b(if|while|for|return|else|import)\\b"
+			}]
+		},
+		"letter": {
+			"match": "u8|u32|u64|s8|s32|s64|bool|true|false|string|fn",
+			"name": "keyword.letter"
+		  },
+		"strings": {
+			"name": "string.quoted.double.jec",
+			"patterns": [
+				{
+					"name": "constant.character.escape.jec",
+					"match": "('.{0,1}')|(\"(.*?)\")"
+				}
+			]
+		},
+		"number" : {
+			"name" : "string.quoted.double.jec",
+			"patterns": [
+				{
+				"name": "constant.character.escape.jec",
+				"match": "[0-9]+"
+			}
+		]
+		},
+		"comment" : {
+			"name": "string.quoted.double.jec",
+			"begin": "\\*",
+			"end": "\\*",
+			"patterns": [
+				{
+					"name": "constant.character.escape.jec",
+					"match": "\\\\."
+				}
+			]
+		},
+		"paren-expression": {
+			"begin": "\\(",
+			"end": "\\)",
+			"beginCaptures": {
+			  "0": { "name": "punctuation.paren.open" }
+			},
+			"endCaptures": {
+			  "0": { "name": "punctuation.paren.close" }
+			},
+			"name": "expression.group",
+			"patterns": [{ "include": "#expression" }]
+		}
+		
+	},
+	"scopeName": "source.jec"
+}
