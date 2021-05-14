@@ -1,3 +1,3 @@
 @echo off
 
-code ../jec-highlight-0.1.1.vsix
+code --install-extension ../jec-0.1.1.vsix
