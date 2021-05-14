@@ -1,0 +1,1 @@
+code ../jec-highlight0.1.1.vsix

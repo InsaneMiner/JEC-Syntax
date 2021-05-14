@@ -1,8 +1,9 @@
 {
     "name": "jec",
     "displayName": "JEC",
-    "description": "JEC programming language",
-    "version": "0.0.1",
+    "description": "JEC programming language syntax highlighter",
+    "version": "0.1.1",
+    "publisher":"InsaneMiner",
     "engines": {
         "vscode": "^1.56.0"
     },

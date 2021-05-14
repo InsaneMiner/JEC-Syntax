@@ -16,3 +16,7 @@ Currently None
 ### 0.1.0
 
 Initial release of Jec
+
+### 0.1.1
+
+Added some more syntax

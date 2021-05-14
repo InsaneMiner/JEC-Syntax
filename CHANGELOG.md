@@ -11,3 +11,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## 0.1.0
 
 - First features, basic syntax highlighting for the current syntax of Jec.
+
+## 0.1.1
+
+- Added some more syntax
