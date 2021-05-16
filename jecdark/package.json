@@ -1,0 +1,21 @@
+{
+    "name": "jecdark",
+    "displayName": "JecDark",
+    "description": "Cool dark theam for cool people",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "JecDark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/JecDark-color-theme.json"
+            }
+        ]
+    }
+}

@@ -20,45 +20,46 @@
 		{
 			"include": "#number"
 		}
-
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.jec",
-				"match": "\\b(if|while|for|return|else|import)\\b"
+				"match": "\\b(if|while|for|return|else|import|fn)\\b"
 			}]
 		},
 		"letter": {
-			"match": "u8|u16|u32|u64|s8|s16|s32|s64|bool|true|false|string|fn",
+			"match": "U8|U16|U32|U64|S8|S16|S32|S64|bool|true|false|string",
 			"name": "keyword.letter"
 		  },
 		"strings": {
 			"name": "string.quoted.double.jec",
 			"patterns": [
 				{
-					"name": "constant.character.escape.jec",
+					"name": "string.quoted.double.jec",
 					"match": "('.{0,1}')|(\"(.*?)\")"
 				}
 			]
 		},
 		"number" : {
-			"name" : "string.quoted.double.jec",
+			"name" : "constant.numeric",
 			"patterns": [
 				{
-				"name": "constant.character.escape.jec",
+				"name": "constant.numeric",
 				"match": "[0-9]+"
 			}
 		]
 		},
 		"comment" : {
 			"name": "string.quoted.double.jec",
-			"begin": "\\*",
-			"end": "\\*",
 			"patterns": [
 				{
-					"name": "constant.character.escape.jec",
-					"match": "\\\\."
+					"name": "punctuation.definition.comment",
+					"match": "\/\/(.*)"
+				},
+				{
+					"name": "punctuation.definition.comment",
+					"match": "/*([^\n]*\n+)+*/"
 				}
 			]
 		},
